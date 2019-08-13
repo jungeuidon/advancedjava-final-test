@@ -2,6 +2,11 @@ package prob02;
 
 import java.util.Scanner;
 
+import prob02.Add;
+import prob02.Div;
+import prob02.Mul;
+import prob02.Sub;
+
 public class CalcApp {
 
 	public static void main(String[] args) {
@@ -13,5 +18,30 @@ public class CalcApp {
 		String operation = scanner.next();
 		
 		/* operation에 따라 4칙 연산 객체를 생성하고 caculate 메서드를 호출합니다. */
+		
+		
+		switch(operation) {
+		case "+" :{
+			Add add = new Add();
+			int result = add.calculate(a, b);
+			System.out.println(result);
+			break;
+		}case "-" :{
+			Sub sub = new Sub();
+			int result = sub.calculate(a, b);
+			System.out.println(result);
+			break;
+		}case "*" :{
+			Mul mul = new Mul();
+			int result = mul.calculate(a, b);
+			System.out.println(result);
+			break;
+		}case "/" :{
+			Div div = new Div();
+			int result = div.calculate(a, b);
+			System.out.println(result);
+			break;
+		}
+	}
 	}
 }
